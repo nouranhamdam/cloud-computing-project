@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'students'
+      MYSQL_ROOT_PASSWORD: 'pass'        
+      MYSQL_USER: 'newuser'              
+      MYSQL_PASSWORD: 'newpassword'      
+    ports:
+      - "3306:3306"
+
+  web:
+    build: 
+      context: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
