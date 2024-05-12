@@ -1,0 +1,14 @@
+CREATE TABLE students (
+    name VARCHAR(255),
+    ID VARCHAR(255) PRIMARY KEY,
+    age INT,
+    cgpa FLOAT
+);
+
+INSERT INTO students (name, ID, age, cgpa)
+VALUES
+    ('Nouran Mohamed Hemdan', '20221321932', 20, 3.0),
+    ('Malak Mahmoud Aref', '20221445867', 21, 3.2),
+    ('Aya Abdelmoniem Mohamed', '20221462478', 19, 3.8),
+    ('Karim Magdy Ibrahim', '2003123', 22, 3.5),
+    ('Ziad Hassan Moawad', '2103190', 20, 3.6);
